@@ -10,21 +10,34 @@ public class BoardSpot
     private boolean containsShip;
     private Ship battleShip;
     private boolean containsHead;
-    public BoardSpot(boolean contains, Ship ship)
+    public BoardSpot()
     {
-        containsShip=contains;
-        battleShip=ship;
+        containsShip=false;
+        battleShip=null;
+        containsHead=false;
     }
     public Ship getBattleShip()
     {
         return battleShip;
     }
+    public void setBattleShip(Ship s)
+    {
+        battleShip=s;
+    }
     public boolean getContainsShip()
     {
         return containsShip;
     }
-    public boolean getContainsHeAD()
+    public void setContainsShip(boolean bool)
+    {
+        containsShip=bool;
+    }
+    public boolean getContainsHead()
     {
         return containsShip;
+    }
+    public void setContainsHead(boolean bool)
+    {
+        containsHead=bool;
     }
 }
