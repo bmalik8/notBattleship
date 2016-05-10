@@ -35,5 +35,8 @@ public class GameboardYou
         }
     }
     
-    
+    public BoardSpot getBoardSpot(int row, int col)
+    {
+        return board[row][col];
+    }
 }
