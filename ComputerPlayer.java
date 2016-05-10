@@ -1,3 +1,5 @@
+package notBattleship;
+
 
 /**
  * Write a description of class ComputerPlayer here.
@@ -16,6 +18,6 @@ public class ComputerPlayer extends Player
 
     public int getCompShips()
     {
-        return getCompShips;
+        return compShips;
     }
 }

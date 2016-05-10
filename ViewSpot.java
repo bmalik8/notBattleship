@@ -1,3 +1,5 @@
+package notBattleship;
+
 
 /**
  * Write a description of interface Spot here.

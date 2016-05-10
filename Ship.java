@@ -1,3 +1,5 @@
+package notBattleship;
+
 
 /**
  * Ships for battle

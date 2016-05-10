@@ -1,3 +1,5 @@
+package notBattleship;
+
 
 /**
  * Each position in the Array for game board
