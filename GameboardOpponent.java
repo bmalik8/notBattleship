@@ -22,7 +22,7 @@ public class GameboardOpponent
         int col=(int)(Math.random()*10+1);
         while (ctr<5)
         {
-            Ship compShip=newShip(lens[ctr])
+            Ship compShip=new Ship(lens[ctr]);
             row=(int)(Math.random()*10+1);
             col=(int)(Math.random()*10+1);
             int vert=(int)(Math.random()*2);

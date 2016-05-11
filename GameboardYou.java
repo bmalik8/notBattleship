@@ -1,7 +1,3 @@
-
- 
-
-
 //Allison
 
 public class GameboardYou

@@ -21,9 +21,9 @@ public class Ship
         isVert=true;
     }
     
-    public void changeVert()
+    public void setIsVert(boolean bool)
     {
-        isVert=!isVert;
+        isVert=bool;
     }
     
     public void hit()
