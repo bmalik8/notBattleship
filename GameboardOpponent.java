@@ -9,7 +9,7 @@ public class GameboardOpponent
         {
             for (int col=0; col<10; col++)
             {
-                board[row][col]=new ViewSpot();
+                board[row][col]=new BoardSpot();
             }
         }
     }
@@ -23,8 +23,8 @@ public class GameboardOpponent
         while (ctr<5)
         {
             Ship compShip=new Ship(lens[ctr]);
-            row=(int)(Math.random()*10+1);
-            col=(int)(Math.random()*10+1);
+            row=(int)(Math.random()*10);
+            col=(int)(Math.random()*10);
             int vert=(int)(Math.random()*2);
             if (vert==0)
             {
@@ -34,16 +34,56 @@ public class GameboardOpponent
             {
                 compShip.setIsVert(false);
             }
-            if(compShip.getIsVert)
+            boolean valid=true;
+            if(compShip.getIsVert())
             {
-                boolean valid=true;
-                for (int i=0; i<len; i++)
+                for (int i=0; i<lens[ctr]; i++)
                 {
-                    if ((row+i>board.length || col+i>board[0].length) ||
-                    (board[row+i][col+i].containsShip==true))
+                    if ((row+i>board.length || col>board[0].length) ||
+                    (board[row+i][col].getContainsShip()==true))
                         valid=false;
                 }
             }
+            else
+            {
+                for (int i=0; i<lens[ctr]; i++)
+                {
+                    if ((row>board.length || col+i>board[0].length) ||
+                    (board[row][col+i].getContainsShip()==true))
+                        valid=false;
+                }
+            }
+            if(valid)
+            {
+                if(compShip.getIsVert())
+                {
+                    board[row][col].setContainsShip(true);
+                    board[row][col].setBattleShip(compShip);
+                    board[row][col].setContainsHead(true);
+                    for (int i=1; i<lens[ctr]; i++)
+                    {
+                        board[row+i][col].setContainsShip(true);
+                        board[row+i][col].setBattleShip(compShip);
+                    }
+                }
+                else
+                {
+                    board[row][col].setContainsShip(true);
+                    board[row][col].setBattleShip(compShip);
+                    board[row][col].setContainsHead(true);
+                    for (int i=1; i<lens[ctr]; i++)
+                    {
+                        board[row][col+i].setContainsShip(true);
+                        board[row][col+i].setBattleShip(compShip);
+                    }
+                }
+                ctr++;
+            }
         }
+    }
+    
+    public static BoardSpot getBoardSpot(int row, int col)
+    {
+        return board[row][col];
     }
 }

@@ -23,7 +23,7 @@ public class ComputerPlayer extends Player
     
     public void takeShot(int x, int y)
     {
-        if ((GameboardGameboardOpponent.getBoardSpot(y,x)).getContainsShip() == true)
+        if ((GameboardOpponent.getBoardSpot(y,x)).getContainsShip() == true)
         {
             ((GameboardOpponent.getBoardSpot(y,x)).getBattleShip()).hit();
         } 
