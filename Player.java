@@ -22,7 +22,7 @@ public class Player
     {
         if ((getBoardSpot(y,x)).getContainsShip== true)
         {
-            ((getBoardSport(y,x)).getBattleShip()).hit();
+            ((getBoardSpot(y,x)).getBattleShip()).hit();
         }
     }
-}
+}   
