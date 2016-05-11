@@ -1,10 +1,7 @@
- 
-
-
 /**
  * Write a description of interface Spot here.
  * 
- * @author (your name) 
+ * @Basit Malik 
  * @version (a version number or a date)
  */
 public class ViewSpot
@@ -14,11 +11,18 @@ public class ViewSpot
     {
         hit=false;
     }
-    public void changeHit()
+    public boolean changeHit()//The else with a return of false is so that we can prompt the player to
+                              //choose again if the method returns false so they cannot choose the
+                              //same spot twice
     {
         if (hit==false)
         {
             hit=true;
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }
