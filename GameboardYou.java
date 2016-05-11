@@ -1,12 +1,12 @@
 
-package notBattleship;
+ 
 
 
 //Allison
 
 public class GameboardYou
 {
-    private BoardSpot[][] board;
+    private static BoardSpot[][] board;
     int shipsSunken;
     public GameboardYou()
     {
@@ -47,7 +47,7 @@ public class GameboardYou
         }
     }
     
-    public BoardSpot getBoardSpot(int row, int col)
+    public static BoardSpot getBoardSpot(int row, int col)
     {
         return board[row][col];
     }

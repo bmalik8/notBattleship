@@ -1,4 +1,4 @@
-package notBattleship;
+ 
 
 //Group awesome
 //Battleship

@@ -1,7 +1,7 @@
 //Allison
 public class GameboardOpponent
 {
-    private ViewSpot [][] board;
+    private static ViewSpot [][] board;
     public GameboardOpponent()
     {
         board=new ViewSpot[10][10];
@@ -12,6 +12,22 @@ public class GameboardOpponent
                 board[row][col]=new ViewSpot();
             }
         }
-        //shipsSunken=0;
+    }
+
+    public void placeShips()
+    {
+        int ctr=0;
+        int[] lens={2,3,3,4,5};
+        int row=(int)(Math.random()*10+1);
+        int col=(int)(Math.random()*10+1);
+        while (ctr<5)
+        {
+            Ship compShip=newShip(lens[ctr])
+            row=(int)(Math.random()*10+1);
+            col=(int)(Math.random()*10+1);
+            int vert=(int)(Math.random()*2);
+            //if vert
+
+        }
     }
 }
