@@ -20,9 +20,9 @@ public class Player
 
     public void takeShot(int x, int y)
     {
-        if ((getBoardSpot(y,x)).getContainsShip== true)
+        if ((GameboardYou.getBoardSpot(y,x)).getContainsShip() == true)
         {
-            ((getBoardSpot(y,x)).getBattleShip()).hit();
-        }
+            ((GameboardYou.getBoardSpot(y,x)).getBattleShip()).hit();
+        } 
     }
 }   

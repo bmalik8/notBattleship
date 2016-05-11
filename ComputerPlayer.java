@@ -20,4 +20,13 @@ public class ComputerPlayer extends Player
     {
         return compShips;
     }
+    
+    public void takeShot(int x, int y)
+    {
+        if ((GameboardGameboardOpponent.getBoardSpot(y,x)).getContainsShip() == true)
+        {
+            ((GameboardOpponent.getBoardSpot(y,x)).getBattleShip()).hit();
+        } 
+    }
+    
 }
