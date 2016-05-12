@@ -2,6 +2,7 @@
 public class GameboardOpponent
 {
     private static BoardSpot [][] board;
+    int shipsSunken;
     public GameboardOpponent()
     {
         board=new BoardSpot[10][10];
@@ -12,6 +13,7 @@ public class GameboardOpponent
                 board[row][col]=new BoardSpot();
             }
         }
+        shipsSunken=0;
     }
 
     public void placeShips()
@@ -85,5 +87,16 @@ public class GameboardOpponent
     public static BoardSpot getBoardSpot(int row, int col)
     {
         return board[row][col];
+    }
+    
+    public void shipSunk(Ship ship)
+    {
+        if (ship.getHitCtr()==ship.getLen())
+        {
+            shipsSunken++;
+            System.out.println("You sunk their battleship!");
+        }   
+        if (shipsSunken==5)
+            System.out.println("You win!");
     }
 }
