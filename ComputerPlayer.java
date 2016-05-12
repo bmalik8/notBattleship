@@ -21,8 +21,10 @@ public class ComputerPlayer extends Player
         return compShips;
     }
     
-    public void takeShot(int x, int y)
+    public void takeShot()
     {
+        int x= (int)(Math.random()*10);
+        int y= (int)(Math.random()*10);
         if ((GameboardOpponent.getBoardSpot(y,x)).getContainsShip() == true)
         {
             ((GameboardOpponent.getBoardSpot(y,x)).getBattleShip()).hit();

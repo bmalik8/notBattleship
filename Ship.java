@@ -1,7 +1,4 @@
- 
-
-
-/**
+ /**
  * Ships for battle
  * 
  * @Basit Malik
