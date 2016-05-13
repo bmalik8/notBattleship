@@ -41,8 +41,9 @@ public class GameboardOpponent
             {
                 for (int i=0; i<lens[ctr]; i++)
                 {
-                    if ((row+i>board.length || col>board[0].length) ||
-                    (board[row+i][col].getContainsShip()==true))
+                    if (row+i>=board.length || col>=board[0].length)
+                        valid=false;
+                    else if(board[row+i][col].getContainsShip()==true)
                         valid=false;
                 }
             }
@@ -50,8 +51,9 @@ public class GameboardOpponent
             {
                 for (int i=0; i<lens[ctr]; i++)
                 {
-                    if ((row>board.length || col+i>board[0].length) ||
-                    (board[row][col+i].getContainsShip()==true))
+                    if (row>=board.length || col+i>=board[0].length) 
+                        valid=false;
+                    else if(board[row][col+i].getContainsShip()==true)
                         valid=false;
                 }
             }
@@ -83,12 +85,12 @@ public class GameboardOpponent
             }
         }
     }
-    
+
     public static BoardSpot getBoardSpot(int row, int col)
     {
         return board[row][col];
     }
-    
+
     public void shipSunk(Ship ship)
     {
         if (ship.getHitCtr()==ship.getLen())

@@ -7,7 +7,7 @@
  */
 public class TestClass
 {
-    public static void main (String[] args)
+    public static void main (String[] args) 
     {
         // created a player and a computer opponent w/ boards
         Player p1= new Player();

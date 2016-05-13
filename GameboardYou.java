@@ -1,5 +1,6 @@
 //Allison
 //This is the class that the player sees when playing battleship
+import javax.swing.JOptionPane;
 public class GameboardYou
 {
     //board is filled with boardSpots
@@ -23,35 +24,75 @@ public class GameboardYou
     //User drag and drops the ship into place, the index is the location of the head
     //fills in rest of grid based on if it's vert or horizontal. also checks to make sure 
     // that the ship is in a valid place
-    public void placeShip(int row, int col, Ship ship) throws Exception
+    public void placeShip(int row, int col, Ship ship)
     {
-        Exception ex;
+        boolean valid=true;
         if (row>board.length || col>board[0].length)
-            throw new Exception("Can't place ship there!");
-        if (ship.getIsVert())
         {
-            board[row][col].setContainsShip(true);
-            board[row][col].setBattleShip(ship);
-            board[row][col].setContainsHead(true);
-            for (int i=1; i<ship.getLen(); i++)
-            {
-                if (row+i>=ship.getLen())
-                    throw new Exception("Can't place ship there!");
-                board[row+i][col].setContainsShip(true);
-                board[row+i][col].setBattleShip(ship);
-            }
+            valid=false;
+            JOptionPane.showMessageDialog(null,"Can't place ship here");
         }
-        else
+        else if (board[row][col].getContainsShip()==true)
         {
-            board[row][col].setContainsShip(true);
-            board[row][col].setBattleShip(ship);
-            board[row][col].setContainsHead(true);
-            for (int i=1; i<ship.getLen(); i++)
+            valid=false;
+            JOptionPane.showMessageDialog(null,"Can't place ship here");
+        }
+        
+        if (valid)
+        {
+            if (ship.getIsVert())
             {
-                if (col+i>=ship.getLen())
-                    throw new Exception("Can't place ship there!");
-                board[row][col+i].setContainsShip(true);
-                board[row][col+i].setBattleShip(ship);
+                board[row][col].setContainsShip(true);
+                board[row][col].setBattleShip(ship);
+                board[row][col].setContainsHead(true);
+                for (int i=1; i<ship.getLen(); i++)
+                {
+                    if (row+i>=board.length || col>=board[0].length)
+                    {
+                        valid=false;
+                        JOptionPane.showMessageDialog(null,"Can't place ship here");
+                    }
+                    else if(board[row+i][col].getContainsShip()==true)
+                    {
+                        valid=false;
+                        JOptionPane.showMessageDialog(null,"Can't place ship here");
+                    }
+                }
+                if (valid)
+                {
+                    for (int i=1; i<ship.getLen(); i++)
+                    {
+                        board[row+i][col].setContainsShip(true);
+                        board[row+i][col].setBattleShip(ship);
+                    }
+                }
+            }
+            else //is horizontal
+            {
+                board[row][col].setContainsShip(true);
+                board[row][col].setBattleShip(ship);
+                board[row][col].setContainsHead(true);
+                for (int i=1; i<ship.getLen(); i++)
+                {
+                    if (col+i>=board.length || row>=board[0].length)
+                    {
+                        valid=false;
+                        JOptionPane.showMessageDialog(null,"Can't place ship here");
+                    }
+                    else if(board[row][col+i].getContainsShip()==true)
+                    {
+                        valid=false;
+                        JOptionPane.showMessageDialog(null,"Can't place ship here");
+                    }
+                }
+                if (valid)
+                {
+                    for (int i=1; i<ship.getLen(); i++)
+                    {
+                        board[row][col+i].setContainsShip(true);
+                        board[row][col+i].setBattleShip(ship);
+                    }
+                }
             }
         }
     }
