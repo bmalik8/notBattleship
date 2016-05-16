@@ -30,8 +30,8 @@ public class TestClass
         yourBoard.placeShip(1,2, carrier);
         yourBoard.placeShip(5,3, battleship);
         yourBoard.placeShip(7,7, submarine);
-        //yourBoard.placeShip(1,2, destroyer); //should not work bc already ship there
-        //yourBoard.placeShip(9,9, patrolBoat);// should not work bc goes off board
+        yourBoard.placeShip(1,2, destroyer); //should not work bc already ship there
+        yourBoard.placeShip(9,9, patrolBoat);// should not work bc goes off board
         
         // one sequence 
         p1.takeShot(4,5);
