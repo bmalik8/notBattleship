@@ -6,8 +6,8 @@
  */
 public class ViewSpot
 {
-    private boolean hit;
-    public ViewSpot()
+    private boolean hit;//Boolean for the gameboard to know if a spot has been hit or not
+    public ViewSpot()//initializes all spots as not hit (fresh game)
     {
         hit=false;
     }

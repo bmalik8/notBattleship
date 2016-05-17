@@ -9,10 +9,10 @@
  */
 public class BoardSpot
 {
-    private boolean containsShip;
-    private Ship battleShip;
-    private boolean containsHead;
-    public BoardSpot()
+    private boolean containsShip;//Whether or not a spot contains a ship
+    private Ship battleShip;//If there is a ship, whichever ship is contianed
+    private boolean containsHead;//Whether or not the head of the ship(either top-most or left-most spot)
+    public BoardSpot()//initializes all spots as fresh empty spots
     {
         containsShip=false;
         battleShip=null;

@@ -6,10 +6,10 @@
  */
 public class Ship
 {
-    private int len;
-    private int hitCtr;
-    private boolean isSunken;
-    private boolean isVert;
+    private int len;//length of ship
+    private int hitCtr;//How many times the ship has been hit
+    private boolean isSunken;//Whether or not the ship is sunken or not
+    private boolean isVert;//Orientation of the ship
     public Ship(int length)
     {
         len=length;
