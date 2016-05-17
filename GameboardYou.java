@@ -24,6 +24,8 @@ public class GameboardYou
     //User drag and drops the ship into place, the index is the location of the head
     //fills in rest of grid based on if it's vert or horizontal. also checks to make sure 
     // that the ship is in a valid place
+    //every time you check for something and it's false, pop up message appears and 
+    //ship doesn't get placed
     public void placeShip(int row, int col, Ship ship)
     {
         boolean valid=true;
@@ -101,7 +103,7 @@ public class GameboardYou
     {
         return board[row][col];
     }
-
+    //checks if they sunk you battleship and then if you lost or not
     public void loseGame(Ship ship)
     {
         if (ship.getHitCtr()==ship.getLen())
