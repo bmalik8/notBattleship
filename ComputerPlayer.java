@@ -28,6 +28,7 @@ public class ComputerPlayer extends Player
         if ((GameboardOpponent.getBoardSpot(y,x)).getContainsShip() == true)
         {
             ((GameboardOpponent.getBoardSpot(y,x)).getBattleShip()).hit();
+            GameboardOpponent.getBoardSpot(y,x).setIsHit(true);
         } 
     }
     

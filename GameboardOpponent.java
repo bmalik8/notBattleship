@@ -120,4 +120,25 @@ public class GameboardOpponent
         if (shipsSunken==5)
             System.out.println("You win!");
     }
+    // print board, 0 for empty, X for attempts [X] for hit ships
+    public String toString()
+    {
+        String s="";
+        s+="  0 1 2 3 4 5 6 7 8 9\n";
+        for (int i=0; i<10; i++)
+        {
+            s+=i+" ";
+            for (int j=0; j<10; j++)
+            {
+                if (board[i][j].getContainsShip() && board[i][j].getIsHit())
+                    s+="[X] ";
+                else if (board[i][j].getIsHit())
+                    s+="X ";
+                else
+                    s+="O ";
+            }
+            s+="\n";
+        }
+        return s;
+    }
 }
