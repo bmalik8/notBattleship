@@ -99,6 +99,11 @@ public class GameboardYou
         }
     }
 
+    public int getShipsSunken()
+    {
+        return shipsSunken;
+    }
+    
     public static BoardSpot getBoardSpot(int row, int col)
     {
         return board[row][col];
@@ -128,13 +133,13 @@ public class GameboardYou
             for (int j=0; j<10; j++)
             {
                 if (board[i][j].getContainsShip() && board[i][j].getIsHit())
-                    s+="[X] ";
-                else if (board[i][j].getContainsShip())
-                    s+="[S] ";
-                else if (board[i][j].getIsHit())
                     s+="X ";
-                else
+                else if (board[i][j].getContainsShip())
                     s+="O ";
+                else if (board[i][j].getIsHit())
+                    s+="W ";
+                else
+                    s+="  ";
             }
             s+="\n";
         }

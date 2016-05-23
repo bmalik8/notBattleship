@@ -18,7 +18,7 @@ public class Player
         return numShips;
     }
 
-    public void takeShot(int x, int y)
+    public static void takeShot(int x, int y)
     {
         if ((GameboardYou.getBoardSpot(y,x)).getContainsShip() == true)
         {

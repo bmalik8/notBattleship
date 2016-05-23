@@ -107,7 +107,12 @@ public class GameboardOpponent
     {
         return board[row][col];
     }
-
+    
+    public int getShipsSunken()
+    {
+        return shipsSunken;
+    }
+    
     public void shipSunk(Ship ship)
     {
         //checks if you sink the opponents battleship
@@ -130,12 +135,10 @@ public class GameboardOpponent
             s+=i+" ";
             for (int j=0; j<10; j++)
             {
-                if (board[i][j].getContainsShip() && board[i][j].getIsHit())
-                    s+="[X] ";
-                else if (board[i][j].getIsHit())
+                if (board[i][j].getIsHit())
                     s+="X ";
                 else
-                    s+="O ";
+                    s+="  ";
             }
             s+="\n";
         }
