@@ -1,4 +1,3 @@
- 
 
 //Group awesome
 //Battleship
@@ -20,9 +19,10 @@ public class Player
 
     public static void takeShot(int x, int y)
     {
-        if ((GameboardYou.getBoardSpot(y,x)).getContainsShip() == true)
+        if ((GameboardOpponent.getBoardSpot(y,x)).getContainsShip() == true)
         {
-            ((GameboardYou.getBoardSpot(y,x)).getBattleShip()).hit();
+            ((GameboardOpponent.getBoardSpot(y,x)).getBattleShip()).hit();
         } 
+        GameboardOpponent.getBoardSpot(y,x).setIsHit(true);
     }
 }   

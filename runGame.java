@@ -37,7 +37,7 @@ public class runGame
             System.out.println("Enter y coordinate of your shot: ");
             y=sc.nextInt();
             Player.takeShot(x,y);
-            //ComputerPlayer.takeShot();
+            ComputerPlayer.takeShot();
             printBoards();
             
         }
