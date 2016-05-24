@@ -4,7 +4,7 @@ public class GameboardOpponent
     //this is the board that the player sees and takes shots at, trying to sink the computer's
     //ships
     private static BoardSpot [][] board;
-    int shipsSunken;
+    private static int shipsSunken;
     public GameboardOpponent()
     {
         //creates a new board and fills them with empty board spots, default positions are empty
@@ -113,7 +113,7 @@ public class GameboardOpponent
         return shipsSunken;
     }
     
-    public void shipSunk(Ship ship)
+    public static void shipSunk(Ship ship)
     {
         //checks if you sink the opponents battleship
         if (ship.getHitCtr()==ship.getLen())

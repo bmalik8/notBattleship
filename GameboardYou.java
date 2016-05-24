@@ -109,7 +109,7 @@ public class GameboardYou
         return board[row][col];
     }
     //checks if they sunk you battleship and then if you lost or not
-    public void loseGame(Ship ship)
+    public void shipSunk(Ship ship)
     {
         if (ship.getHitCtr()==ship.getLen())
         {
