@@ -1,4 +1,3 @@
- 
 
 
 /**
@@ -10,6 +9,7 @@
 public class ComputerPlayer extends Player
 {
     private int compShips;
+    boolean foundShip = false;
 
     public ComputerPlayer()
     {
@@ -20,16 +20,22 @@ public class ComputerPlayer extends Player
     {
         return compShips;
     }
-    
-    public void takeShot()
+
+    public static void takeShot()
     {
-        int x= (int)(Math.random()*10);
-        int y= (int)(Math.random()*10);
+        if (foundShip = false) {
+            int x= (int)(Math.random()*10);
+            int y= (int)(Math.random()*10);
+        }
+        else {
+            
+        }
         if ((GameboardOpponent.getBoardSpot(y,x)).getContainsShip() == true)
         {
             ((GameboardOpponent.getBoardSpot(y,x)).getBattleShip()).hit();
             GameboardOpponent.getBoardSpot(y,x).setIsHit(true);
+            foundShip = true;
         } 
     }
-    
+
 }
