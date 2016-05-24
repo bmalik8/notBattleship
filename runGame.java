@@ -6,12 +6,8 @@ public class runGame
     static Scanner sc=new Scanner(System.in);
     static int[] lengths={2,3,3,4,5};
     static String[] boats={"patrol boat","destroyer","submarine","battleship","carrier"};
-<<<<<<< HEAD
-    public  void main (String [] args)
-=======
     static ComputerPlayer cpu = new ComputerPlayer();
     public static void main (String [] args)
->>>>>>> ec2fb82c02047d6c21802ea3016d3f791b7f551b
     {
         oppBoard.placeShips();
         printBoards();
@@ -42,13 +38,9 @@ public class runGame
             System.out.println("Enter y coordinate of your shot: ");
             y=sc.nextInt();
             Player.takeShot(x,y);
-<<<<<<< HEAD
-            //ComputerPlayer.takeShot();
-=======
             cpu.takeShot();
->>>>>>> ec2fb82c02047d6c21802ea3016d3f791b7f551b
             printBoards();
-            
+
         }
     }
 

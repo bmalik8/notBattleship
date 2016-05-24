@@ -27,14 +27,14 @@ public class ComputerPlayer extends Player
         if (foundShip = false) {
             x= (int)(Math.random()*10);
             y= (int)(Math.random()*10);
-            while((GameboardOpponent.getBoardSpot(y,x)).getIsHit() == true) {
+            while((GameboardYou.getBoardSpot(y,x)).getIsHit() == true) {
                 x= (int)(Math.random()*10);
                 y= (int)(Math.random()*10);
             }
-            if ((GameboardOpponent.getBoardSpot(y,x)).getContainsShip() == true)
+            if ((GameboardYou.getBoardSpot(y,x)).getContainsShip() == true)
             {
-                ((GameboardOpponent.getBoardSpot(y,x)).getBattleShip()).hit();
-                GameboardOpponent.getBoardSpot(y,x).setIsHit(true);
+                ((GameboardYou.getBoardSpot(y,x)).getBattleShip()).hit();
+                GameboardYou.getBoardSpot(y,x).setIsHit(true);
                 foundShip = true;
                 counter = 0;
             } 
@@ -42,11 +42,11 @@ public class ComputerPlayer extends Player
         else {            
             if (counter == 1) {
                 if(x>0) {
-                    if ((GameboardOpponent.getBoardSpot(y,x-1)).getContainsShip() == true && 
-                    (GameboardOpponent.getBoardSpot(y,x-1)).getIsHit() == false)
+                    if ((GameboardYou.getBoardSpot(y,x-1)).getContainsShip() == true && 
+                    (GameboardYou.getBoardSpot(y,x-1)).getIsHit() == false)
                     {
-                        ((GameboardOpponent.getBoardSpot(y,x-1)).getBattleShip()).hit();
-                        GameboardOpponent.getBoardSpot(y,x-1).setIsHit(true);
+                        ((GameboardYou.getBoardSpot(y,x-1)).getBattleShip()).hit();
+                        GameboardYou.getBoardSpot(y,x-1).setIsHit(true);
                         foundShip = true;
                         counter = 0;
                     } 
@@ -56,11 +56,11 @@ public class ComputerPlayer extends Player
             }
             if (counter == 2) {
                 if(x<9) {
-                    if ((GameboardOpponent.getBoardSpot(y,x+1)).getContainsShip() == true && 
-                    (GameboardOpponent.getBoardSpot(y,x+1)).getIsHit() == false)
+                    if ((GameboardYou.getBoardSpot(y,x+1)).getContainsShip() == true && 
+                    (GameboardYou.getBoardSpot(y,x+1)).getIsHit() == false)
                     {
-                        ((GameboardOpponent.getBoardSpot(y,x+1)).getBattleShip()).hit();
-                        GameboardOpponent.getBoardSpot(y,x+1).setIsHit(true);
+                        ((GameboardYou.getBoardSpot(y,x+1)).getBattleShip()).hit();
+                        GameboardYou.getBoardSpot(y,x+1).setIsHit(true);
                         foundShip = true;
                         counter = 0;
                     } 
@@ -70,11 +70,11 @@ public class ComputerPlayer extends Player
             }
             if (counter == 3) {
                 if(y>0) {
-                    if ((GameboardOpponent.getBoardSpot(y-1,x)).getContainsShip() == true && 
-                    (GameboardOpponent.getBoardSpot(y-1,x)).getIsHit() == false)
+                    if ((GameboardYou.getBoardSpot(y-1,x)).getContainsShip() == true && 
+                    (GameboardYou.getBoardSpot(y-1,x)).getIsHit() == false)
                     {
-                        ((GameboardOpponent.getBoardSpot(y-1,x)).getBattleShip()).hit();
-                        GameboardOpponent.getBoardSpot(y-1,x).setIsHit(true);
+                        ((GameboardYou.getBoardSpot(y-1,x)).getBattleShip()).hit();
+                        GameboardYou.getBoardSpot(y-1,x).setIsHit(true);
                         foundShip = true;
                         counter = 0;
                     } 
@@ -84,11 +84,11 @@ public class ComputerPlayer extends Player
             }
             if (counter == 4) {
                 if(y<9) {
-                    if ((GameboardOpponent.getBoardSpot(y+1,x)).getContainsShip() == true && 
-                    (GameboardOpponent.getBoardSpot(y+1,x)).getIsHit() == false)
+                    if ((GameboardYou.getBoardSpot(y+1,x)).getContainsShip() == true && 
+                    (GameboardYou.getBoardSpot(y+1,x)).getIsHit() == false)
                     {
-                        ((GameboardOpponent.getBoardSpot(y+1,x)).getBattleShip()).hit();
-                        GameboardOpponent.getBoardSpot(y+1,x).setIsHit(true);
+                        ((GameboardYou.getBoardSpot(y+1,x)).getBattleShip()).hit();
+                        GameboardYou.getBoardSpot(y+1,x).setIsHit(true);
                         foundShip = true;
                         counter = 0;
                     } 
