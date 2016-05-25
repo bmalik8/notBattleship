@@ -72,6 +72,7 @@ public class runGame
         printBoards();
         int x;
         int y;
+        System.out.println("Let's play! \n0 means a ship is hit \n* means this spot was attempted to be hit, but they missed\nO means that's where your ship is");
         while (oppBoard.getShipsSunken()!=5 || youBoard.getShipsSunken()!=5)
         {
             System.out.println("Enter x coordinate of your shot: ");

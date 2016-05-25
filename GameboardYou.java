@@ -115,7 +115,8 @@ public class GameboardYou
         if (ship.getHitCtr()==ship.getLen())
         {
             shipsSunken++;
-            System.out.println("They sunk your battleship :(");
+            System.out.println("THEY SUNK YOUR BATTLESHIP :(");
+            System.out.println("Number of your ships sunk: "+shipsSunken);
         }
         if (shipsSunken==5)
         {
@@ -138,7 +139,7 @@ public class GameboardYou
                 else if (board[i][j].getContainsShip())
                     s+="O ";
                 else if (board[i][j].getIsHit())
-                    s+="☵ ";
+                    s+="* ";
                 else
                     s+="  ";
             }

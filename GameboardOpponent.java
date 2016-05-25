@@ -119,7 +119,8 @@ public class GameboardOpponent
         if (ship.getIsSunken())
         {
             shipsSunken++;
-            System.out.println("You sunk their battleship!");
+            System.out.println("YOU SUNK THEIR BATTLESHIP! :)");
+            System.out.println("Number of ships sunk: "+shipsSunken);
         }   
         //check if you win
         if (shipsSunken==5)
@@ -138,7 +139,7 @@ public class GameboardOpponent
                 if ((board[i][j].getIsHit())&&(board[i][j].getContainsShip()))
                     s+="0 ";
                     else if (board[i][j].getIsHit())
-                    s+="☵ ";
+                    s+="* ";
                 else
                     s+="  ";
             }

@@ -30,7 +30,8 @@ public class ComputerPlayer extends Player
             x= (int)(Math.random()*10);
             y= (int)(Math.random()*10);
         }
-        ((GameboardYou.getBoardSpot(y,x)).getBattleShip()).hit();
+        if ((GameboardYou.getBoardSpot(y,x)).getContainsShip())
+            ((GameboardYou.getBoardSpot(y,x)).getBattleShip()).hit();
         (GameboardYou.getBoardSpot(y,x)).setIsHit(true); 
 
         /*
