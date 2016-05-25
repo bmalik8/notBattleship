@@ -26,10 +26,10 @@ public class GameboardOpponent
         //ctr counts how many ships get placed,
         int ctr=0;
         //array of lengths of ships that are available in battleship
-        int[] lens={2,3,3,4,5};
+        int[] lens={2,3,3,4,5,};
         int row;
         int col;
-        while (ctr<5)
+        while (ctr<lens.length)
         {
             //creates new ship
             Ship compShip=new Ship(lens[ctr]);
@@ -46,7 +46,7 @@ public class GameboardOpponent
             // boolean valid gets changed after multiple checks, ship only placed if valid==true
             //after all the checks
             boolean valid=true;
-            //check of ship is being placed in valid spaces, on board and not a ship
+            //check of ship is being placed in valid spaces: on board and not a ship
             //already there
             if(compShip.getIsVert())
             {
@@ -58,6 +58,7 @@ public class GameboardOpponent
                         valid=false;
                 }
             }
+            //if not vertical, still just checking to make sure ship can be placed there
             else
             {
                 for (int i=0; i<lens[ctr]; i++)
@@ -107,12 +108,12 @@ public class GameboardOpponent
     {
         return board[row][col];
     }
-    
+
     public int getShipsSunken()
     {
         return shipsSunken;
     }
-    
+
     public static void shipSunk(Ship ship)
     {
         //checks if you sink the opponents battleship
@@ -138,8 +139,13 @@ public class GameboardOpponent
             {
                 if ((board[i][j].getIsHit())&&(board[i][j].getContainsShip()))
                     s+="0 ";
-                    else if (board[i][j].getIsHit())
+                else if (board[i][j].getIsHit())
                     s+="* ";
+                /*
+                else if (board[i][j].getContainsShip())
+                s+="1 ";
+                 */
+
                 else
                     s+="  ";
             }

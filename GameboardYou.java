@@ -29,7 +29,7 @@ public class GameboardYou
     public boolean placeShip(int row, int col, Ship ship)
     {
         boolean valid=true;
-        if (row>board.length || col>board[0].length)
+        if (row>=board.length || col>=board[0].length)
         {
             valid=false;
             JOptionPane.showMessageDialog(null,"Can't place ship here");
