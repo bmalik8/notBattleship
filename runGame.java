@@ -22,12 +22,24 @@ public class runGame
             System.out.println("Do you want the ship to be vertical? (y or n)");
             String phrase=sc.next();
             Ship ship=new Ship(lengths[i]);
+            boolean shipPlaced;
             if ((phrase.equals("y")) || (phrase.equals("Y")))
+            {
                 ship.setIsVert(true);
+                shipPlaced=youBoard.placeShip(row,col,ship);
+            }
             else if ((phrase.equals("n")) || (phrase.equals("N")))
+            {
                 ship.setIsVert(false);
-            youBoard.placeShip(row,col,ship);
-            while(youBoard.getBoardSpot(row,col).getContainsShip()==false)
+                shipPlaced=youBoard.placeShip(row,col,ship);
+            }
+            else
+            {
+                System.out.println("Invalid input.");
+                shipPlaced=false;
+            }
+
+            while(shipPlaced==false)
             {
                 System.out.println("Try placing that ship in a valid spot");
                 System.out.println("Enter row of head of "+boats[i]+" (length of " +lengths[i]+")");
@@ -38,10 +50,20 @@ public class runGame
                 phrase=sc.next();
                 ship=new Ship(lengths[i]);
                 if ((phrase.equals("y")) || (phrase.equals("Y")))
+                {
                     ship.setIsVert(true);
+                    shipPlaced=youBoard.placeShip(row,col,ship);
+                }
                 else if ((phrase.equals("n")) || (phrase.equals("N")))
+                {
                     ship.setIsVert(false);
-                youBoard.placeShip(row,col,ship);
+                    shipPlaced=youBoard.placeShip(row,col,ship);
+                }
+                else
+                {
+                    System.out.println("Invalid input.");
+                    shipPlaced=false;
+                }
             }
             printBoards();
             i++;

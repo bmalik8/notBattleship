@@ -26,7 +26,7 @@ public class GameboardYou
     // that the ship is in a valid place
     //every time you check for something and it's false, pop up message appears and 
     //ship doesn't get placed
-    public void placeShip(int row, int col, Ship ship)
+    public boolean placeShip(int row, int col, Ship ship)
     {
         boolean valid=true;
         if (row>board.length || col>board[0].length)
@@ -97,6 +97,7 @@ public class GameboardYou
                 }
             }
         }
+        return valid;
     }
 
     public int getShipsSunken()
