@@ -136,9 +136,9 @@ public class GameboardOpponent
             for (int j=0; j<10; j++)
             {
                 if ((board[i][j].getIsHit())&&(board[i][j].getContainsShip()))
-                    s+="X ";
-                    else if (board[i][j].getIsHit())
                     s+="0 ";
+                    else if (board[i][j].getIsHit())
+                    s+="☵ ";
                 else
                     s+="  ";
             }
