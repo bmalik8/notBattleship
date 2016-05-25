@@ -44,9 +44,6 @@ public class GameboardYou
         {
             if (ship.getIsVert())
             {
-                board[row][col].setContainsShip(true);
-                board[row][col].setBattleShip(ship);
-                board[row][col].setContainsHead(true);
                 for (int i=1; i<ship.getLen(); i++)
                 {
                     if (row+i>=board.length || col>=board[0].length)
@@ -62,6 +59,9 @@ public class GameboardYou
                 }
                 if (valid)
                 {
+                    board[row][col].setContainsShip(true);
+                    board[row][col].setBattleShip(ship);
+                    board[row][col].setContainsHead(true);
                     for (int i=1; i<ship.getLen(); i++)
                     {
                         board[row+i][col].setContainsShip(true);
@@ -71,9 +71,6 @@ public class GameboardYou
             }
             else //is horizontal
             {
-                board[row][col].setContainsShip(true);
-                board[row][col].setBattleShip(ship);
-                board[row][col].setContainsHead(true);
                 for (int i=1; i<ship.getLen(); i++)
                 {
                     if (col+i>=board.length || row>=board[0].length)
@@ -89,6 +86,9 @@ public class GameboardYou
                 }
                 if (valid)
                 {
+                    board[row][col].setContainsShip(true);
+                    board[row][col].setBattleShip(ship);
+                    board[row][col].setContainsHead(true);
                     for (int i=1; i<ship.getLen(); i++)
                     {
                         board[row][col+i].setContainsShip(true);
@@ -103,7 +103,7 @@ public class GameboardYou
     {
         return shipsSunken;
     }
-    
+
     public static BoardSpot getBoardSpot(int row, int col)
     {
         return board[row][col];
