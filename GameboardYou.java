@@ -121,6 +121,7 @@ public class GameboardYou
         if (shipsSunken==5)
         {
             System.out.println("You lose"); 
+            System.exit(0);
         }
     }
     //prints out the board O's for empty spaces, X's for attempted Hits, [S] for places with your

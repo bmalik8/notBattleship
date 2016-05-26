@@ -23,6 +23,7 @@ public class runGame
             int x=sc.nextInt();
             System.out.println("Enter y coordinate  of head of "+boats[i]+" (length of " +lengths[i]+")");
             int y=sc.nextInt();
+
             //asking if ship should be going up and down or left and right
             System.out.println("Do you want the ship to be vertical? (y or n)");
             String phrase=sc.next();
