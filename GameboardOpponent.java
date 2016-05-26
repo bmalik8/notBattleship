@@ -125,7 +125,10 @@ public class GameboardOpponent
         }   
         //check if you win
         if (shipsSunken==5)
+        {
             System.out.println("You win!");
+            System.exit(0);
+        }
     }
     // print board, 0 for empty, X for attempts [X] for hit ships
     public String toString()
