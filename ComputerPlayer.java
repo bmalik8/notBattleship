@@ -35,37 +35,8 @@ public class ComputerPlayer extends Player
             y= (int)(Math.random()*10);
         }
 
-        if (foundShip== false && ctr==0)
-        {
-            if ((GameboardYou.getBoardSpot(y,x)).getContainsShip())
-            {
-                ((GameboardYou.getBoardSpot(y,x)).getBattleShip()).hit();
-                foundShip= true;
-                counter= 1;
-                hitX= x;
-                hitY= y;
-                
-            }
-            (GameboardYou.getBoardSpot(y,x)).setIsHit(true);
-        }
-
-        //         if (foundShip = false) {
-        //             x= (int)(Math.random()*10);
-        //             y= (int)(Math.random()*10);
-        //             while((GameboardYou.getBoardSpot(y,x)).getIsHit() == true) {
-        //                 x= (int)(Math.random()*10);
-        //                 y= (int)(Math.random()*10);
-        //             }
-        //             if ((GameboardYou.getBoardSpot(y,x)).getContainsShip() == true)
-        //             {
-        //                 ((GameboardYou.getBoardSpot(y,x)).getBattleShip()).hit();
-        // 
-        //                 foundShip = true;
-        //                 counter = 0;
-        //             } 
-        //             GameboardYou.getBoardSpot(y,x).setIsHit(true);
-        //         }
-        if (foundShip== true && ctr==0) {            
+        
+        if (foundShip== true ) {            
             if (counter == 1) {
                 if(hitX>0) {
                     if ((GameboardYou.getBoardSpot(hitY,hitX-1)).getContainsShip() == true && 
@@ -132,6 +103,21 @@ public class ComputerPlayer extends Player
             }
         } 
 
+        if (foundShip== false)
+        {
+            if ((GameboardYou.getBoardSpot(y,x)).getContainsShip())
+            {
+                ((GameboardYou.getBoardSpot(y,x)).getBattleShip()).hit();
+                foundShip= true;
+                counter= 1;
+                hitX= x;
+                hitY= y;
+                
+            }
+            (GameboardYou.getBoardSpot(y,x)).setIsHit(true);
+        }
+        
+        
         
         
         /*
