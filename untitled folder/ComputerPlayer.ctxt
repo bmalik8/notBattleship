@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=ComputerPlayer()
+comment0.text=\n\ Initializes\ the\ computer\ player\ with\ 5\ ships.\n
+comment1.params=
+comment1.target=int\ getCompShips()
+comment1.text=\n\ Returns\ the\ number\ of\ ships.\ Should\ always\ be\ 5.\n\ @return\ number\ of\ ships.\n
+comment2.params=
+comment2.target=void\ takeShot()
+comment2.text=\n\ Takes\ a\ shot\ at\ a\ random\ spot.\ If\ the\ last\ shot\ hit\ a\ target,\n\ takes\ shots\ around\ the\ last\ hit\ spot.\n
+numComments=3

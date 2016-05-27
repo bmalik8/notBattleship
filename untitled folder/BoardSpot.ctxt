@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=
+comment0.target=BoardSpot()
+comment1.params=
+comment1.target=Ship\ getBattleShip()
+comment2.params=s
+comment2.target=void\ setBattleShip(Ship)
+comment3.params=
+comment3.target=boolean\ getContainsShip()
+comment4.params=bool
+comment4.target=void\ setContainsShip(boolean)
+comment5.params=
+comment5.target=boolean\ getContainsHead()
+comment6.params=bool
+comment6.target=void\ setContainsHead(boolean)
+comment7.params=
+comment7.target=boolean\ getIsHit()
+comment8.params=bool
+comment8.target=void\ setIsHit(boolean)
+numComments=9

@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=
+comment0.target=GUIignore()
+comment0.text=\n\ Create\ the\ applet.\n
+comment1.params=e
+comment1.target=void\ actionPerformed(java.awt.event.ActionEvent)
+numComments=2

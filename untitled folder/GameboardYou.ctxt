@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=
+comment0.target=GameboardYou()
+comment0.text=\n\ Initializes\ a\ Gameboard\ with\ 10\ rows\ and\ 10\ columns,\ and\ fills\ it\ with\ empty\ BoardSpot\ objects.\n
+comment1.params=row\ col\ ship
+comment1.target=boolean\ placeShip(int,\ int,\ Ship)
+comment1.text=\n\ Places\ a\ ship\ based\ on\ a\ ship\ object,\ and\ the\ (x,y)\ of\ the\ bow\ of\ the\ ship.\n\ Checks\ for\ invalid\ ship\ placement.\n
+comment2.params=
+comment2.target=int\ getShipsSunken()
+comment3.params=row\ col
+comment3.target=BoardSpot\ getBoardSpot(int,\ int)
+comment4.params=ship
+comment4.target=void\ shipSunk(Ship)
+comment4.text=\n\ Checks\ to\ see\ whether\ a\ ship\ has\ been\ sunk.\n
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\n\ Creates\ a\ boarder\ from\ 0-9.\n\ Prints\ out\ the\ board,\ based\ on\ the\ state\ of\ the\ BoardSpots\ within\ the\ array.\n
+numComments=6

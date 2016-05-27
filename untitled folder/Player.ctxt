@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Player()
+comment0.text=\n\ Initializes\ the\ player\ instance\ with\ 5\ ships.\n
+comment1.params=
+comment1.target=int\ getNumShips()
+comment1.text=\n\ Returns\ the\ number\ of\ ships.\ Should\ always\ be\ 5.\n\ @return\ number\ of\ ships.\n
+comment2.params=x\ y
+comment2.target=void\ takeShot(int,\ int)
+comment2.text=\n\ Takes\ a\ shot\ at\ a\ spot\ on\ the\ opposing\ players\ board.\n\ @param\ x\ and\ y\ coordinates\n
+numComments=3
